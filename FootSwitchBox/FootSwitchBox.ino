@@ -26,8 +26,9 @@ void loop() {
 
   //ANALOG
   AI_Val = analogRead(AI_FOOT_PIN);
+  AI_Val = map(AI_Val,100,1023,0,127);
   if(abs(AI_Val - lastChangeVal) > CHANGE_THRESH) {
-    usbMIDI.sendControlChange(11,AI_Val/8,CHANNEL); //11 should be expression pedal4
+    usbMIDI.sendControlChange(11,AI_Val,CHANNEL); //11 should be expression pedal4
     lastChangeVal = AI_Val;
   }
 
