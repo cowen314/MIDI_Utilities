@@ -1,4 +1,4 @@
-Firmware for a system responsible for converting digital and analog pedal signal into MIDI control signals.
+Firmware for converting digital and analog pedal signal into MIDI control signals.
 
 This project uses a Teensy board. 
 
